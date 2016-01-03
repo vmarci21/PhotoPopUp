@@ -2,16 +2,41 @@
 javaScript and CSS responsive Photo / image viewer window and gallery.
 
 ## Using
+### First step
 1. Load script.js and style.css.
 2. Add website the contents of the photopopop.html file
-3. Use the showimage function, with this parameter:
+
+### Image
+
+* Use the showimage function, with this parameter:
   * First parameter: Image URL
   * Second parameter: Image title
   * third parameter: Gallery class name (see more: using_test.html and using_test.js)
 
+### Text
+* Use the showtext function, with this parameter:
+  * First parameter: Title
+  * Second parameter: Full text
+
+### example
+```javascript
+imagepopup.showimage('http://test.hu/image.jpg');
+```
+
+```javascript
+imagepopup.showimage('http://test.hu/image.jpg','This is an image.');
+```
+
+```javascript
+imagepopup.showtext('Header','Text');
+```
+
+```javascript
+imagepopup.showtext('Header',document.getElementById('szovpop').innerHTML);
+```
 
 ## Demo
-[JsFiddle](https://jsfiddle.net/xyxuxbpm/4/) ([Full page](https://jsfiddle.net/xyxuxbpm/4/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY)
+[JsFiddle](https://jsfiddle.net/xyxuxbpm/35/) ([Full page](https://jsfiddle.net/xyxuxbpm/35/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY)
 
 
 
