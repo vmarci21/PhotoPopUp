@@ -74,7 +74,7 @@ if(kepek[keptarti+1].dataset.bigsrc!=undefined){
      }else{
      var url = kepek[keptarti+1].src;
      }
- mutatkep(url,kepek[keptarti+1].title,gallerye,keptarti);
+ showimage(url,kepek[keptarti+1].title,gallerye,keptarti);
  }
  function prev(){
  var kepek = document.getElementsByClassName(gallerye);
@@ -83,7 +83,7 @@ if(kepek[keptarti-1].dataset.bigsrc!=undefined){
      }else{
      var url = kepek[keptarti-1].src;
      }
- mutatkep(url,kepek[keptarti-1].title,gallerye,keptarti-1);
+ showimage(url,kepek[keptarti-1].title,gallerye,keptarti-1);
  }
 
 function elrejtkep2(t){
