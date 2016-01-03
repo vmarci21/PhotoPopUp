@@ -4,7 +4,9 @@ mennyiea = 1;
 gallerye = '';
 vantov = false;
 vanvissz = false;
+kepnagyitonyitva = false;
 function showimage(url,text,gallery,ie) {
+kepnagyitonyitva = true;
 var nextkepurl = '';
 var mennyie = 1;
 var mennyie2 = 2;
@@ -12,6 +14,7 @@ if(ie==undefined || ie=='' || ie==null){ie=0;}
 if(elsokep){
 window.addEventListener("resize",function(){kepmeretezes();});
 mobiledrag();
+keyboard_view();
 elsokep = false;
 }
 if(gallery!=undefined){
@@ -93,6 +96,7 @@ elrejtkep();
 }
 
 function elrejtkep(){
+kepnagyitonyitva = false;
  document.getElementById('kepnagyito').className = '';
 setTimeout(function(){ document.getElementById('kepnagyito').style.display = 'none';
 document.getElementById('kepnagyito_szoveg').innerHTML = '';
@@ -126,6 +130,21 @@ function kepmeretezes() {
     }
   }
 }
+function keyboard_view(){
+window.addEventListener('keyup', function(event) {
+if(kepnagyitonyitva){
+       var keyCode = ('which' in event) ? event.which : event.keyCode;
+        if(keyCode==37 && vanvissz){
+   prev();
+   }else if(keyCode==39 && vantov){
+   next();
+   }else if(keyCode==27){
+   elrejtkep();
+   }
+   }
+});
+}
+
 function mobiledrag(){
 startx = 0;
 starty = 0;
