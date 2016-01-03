@@ -7,7 +7,9 @@ javaScript and CSS Photo responsive image viewer window and gallery.
 3. Use the showimage function, with this parameter:
   * First parameter: Image URL
   * Second parameter: Image title
-  * third parameter: Gallery class name
+  * third parameter: Gallery class name (see more: using_test.html and using_test.js)
+
+
 
 ## used
 * [CSS3 + Javascript beúszó ablak](http://kovjonas.into.hu/cssablak.html)
