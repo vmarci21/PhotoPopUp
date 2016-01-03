@@ -1,9 +1,12 @@
 # Photo PopUp
 javaScript and CSS responsive Photo / image viewer window and gallery.
 
+## Demo
+[JsFiddle](https://jsfiddle.net/xyxuxbpm/35/) ([Full page](https://jsfiddle.net/xyxuxbpm/35/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY)
+
 ## Using
 ### First step
-1. Load script.js and style.css.
+1. Load script.js and style.css or script_min.js and style_min.css
 2. Add website the contents of the photopopop.html file
 
 ### Image
@@ -34,9 +37,6 @@ imagepopup.showtext('Header','Text');
 ```javascript
 imagepopup.showtext('Header',document.getElementById('szovpop').innerHTML);
 ```
-
-## Demo
-[JsFiddle](https://jsfiddle.net/xyxuxbpm/35/) ([Full page](https://jsfiddle.net/xyxuxbpm/35/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY)
 
 
 
