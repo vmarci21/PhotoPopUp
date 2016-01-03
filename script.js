@@ -4,7 +4,7 @@ mennyiea = 1;
 gallerye = '';
 vantov = false;
 vanvissz = false;
-function mutatkep(url,text,gallery,ie) {
+function showimage(url,text,gallery,ie) {
 var nextkepurl = '';
 var mennyie = 1;
 var mennyie2 = 2;
