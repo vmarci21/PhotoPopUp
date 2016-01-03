@@ -1,5 +1,5 @@
 # Photo PopUp
-javaScript and CSS Photo responsive image viewer window and gallery.
+javaScript and CSS responsive Photo / image viewer window and gallery.
 
 ## Using
 1. Load script.js and style.css.
