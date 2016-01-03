@@ -1,4 +1,20 @@
-#kepnagyito {
+body{
+  background:#fff;
+}
+
+
+/*
+Script:
+https://github.com/vmarci21/PhotoPopUp
+*/
+
+
+
+
+
+
+/*ImagePopUp CSS*/
+#imagepopup {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,10 +29,10 @@
     -webkit-user-select: none;
     transition: 0.3s;
 }
-#kepnagyito.active {
+#imagepopup.active {
     opacity: 1;
 }
-#kepnagyito_load {
+#imagepopup_load {
     opacity: 0;
     left: 49%;
     left: calc(50% - 27px);
@@ -24,17 +40,17 @@
     position: fixed;
    z-index:101;
 }
-#kepnagyito_load.active {
+#imagepopup_load.active {
     opacity: 1;
 }
-#kepnagyito_felso {
+#imagepopup_panel {
     background: rgba(58, 58, 58, 0.82);
     text-align: right;
     padding: 6px 10px;
     z-index:106;
      position: relative;
 }
-#kepnagyito_szoveg {
+#imagepopup_text {
     background: rgba(58, 58, 58, 0.82);
     text-align: left;
     padding: 6px 10px;
@@ -44,24 +60,24 @@
     color: #fff;
     z-index:104;
 }
-#kepnagyito_szoveg:empty{
+#imagepopup_text:empty{
   display: none;
 }
 
-#kepnagyito_szoveg.kepben{
+#imagepopup_text.kepben{
 position: relative;
 margin: -34px auto;
 }
 
-#kepnagyito a{
+#imagepopup a{
   color:#fff;
 }
-#kepnagyito_next, #kepnagyito_prev {
+#imagepopup_next, #imagepopup_prev {
   opacity: 0;
   color:#fff;
   transition: 0.2s;
 }
-#kepnagyito_next.active, #kepnagyito_prev.active {
+#imagepopup_next.active, #imagepopup_prev.active {
   opacity: 1;
     position: fixed;
     top:0;
@@ -71,7 +87,7 @@ margin: -34px auto;
     cursor: pointer;
     
 }
-#kepnagyito_next span, #kepnagyito_prev span {
+#imagepopup_next span, #imagepopup_prev span {
   position: fixed;
   display: block;
   width: 20px;
@@ -81,21 +97,21 @@ margin: -34px auto;
   background: #3A3A3A;
   transition: 0.2s;
 }
-#kepnagyito_next span{
+#imagepopup_next span{
   float: right;
   right: -1%;
 }
-#kepnagyito_next.active {
+#imagepopup_next.active {
   right:0;
 }
-#kepnagyito_next.active span {
+#imagepopup_next.active span {
     right: 2%;
     }
-#kepnagyito_prev.active {
+#imagepopup_prev.active {
   left:0;
   padding-left:2%;
   }
-#kepnagyito_kep1, #kepnagyito_kep2 {
+#imagepopup_image1, #imagepopup_image2 {
     position: fixed;
     left: 0;
     right: 0;
@@ -105,7 +121,7 @@ margin: -34px auto;
     opacity: 0;
     z-index:102;
 }
-#kepnagyito_kep1.active, #kepnagyito_kep2.active {
+#imagepopup_image1.active, #imagepopup_image2.active {
    opacity: 1;
    z-index:103;
 }
@@ -113,8 +129,29 @@ margin: -34px auto;
   transition: 0.2s;
 }
 
+#window {
+    width: 610px;
+    min-width: 160px!important;
+    padding: 15px;
+    background: #FFF;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.17);
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 0 auto;
+    overflow: auto;
+    transition: 0.3s;
+    text-align: left;
+    opacity: 0;
+    margin-top: -200px;
+}
+#imagepopup_image1.active #window {
+ opacity: 1;
+     margin-top: 10px;
+}
+
+
 @media only screen and ( max-width: 850px ) {
-  #kepnagyito {
+  #imagepopup {
     background: #252525;
   }
 }
