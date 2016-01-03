@@ -128,7 +128,7 @@ margin: -34px auto;
    opacity: 1;
    z-index:103;
 }
-#nagy_kep1 {
+#nagy_kep1, #nagy_kep2 {
   box-shadow: 0 4px 8px #000;
 }
 #nagy_kep1.touch, #nagy_kep2.touch{
