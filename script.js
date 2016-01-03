@@ -3,6 +3,31 @@ Version: 1.0
 http://intomedia.hu
 https://github.com/vmarci21/PhotoPopUp
 */
+window.addEventListener("load", function() {
+  if (document.getElementsByClassName('imagegallery').length > 0) {
+
+    var images = document.getElementsByClassName("imagegallery");
+    for (var i = 0; i < images.length; i++) {
+      images[i].addEventListener("click", function() {
+        imagepopup.showimage(this.dataset.bigsrc, this.title, 'imagegallery');
+
+      });
+    }
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+/*ImagepopUp JS*/
 var imagepopup = {
 firstimage: true,
 imageherei: 0,
@@ -134,13 +159,16 @@ resizeimage: function() {
   if (document.getElementById('nagy_kep'+this.wherediv)) {
     var meret1 = document.getElementById('imagepopup').offsetWidth;
     var meret2 = document.getElementById('imagepopup').offsetHeight;
-    meret2 = meret2-40;
+    meret2 = meret2-50;
     document.getElementById('nagy_kep'+this.wherediv).style.maxWidth = meret1 + 'px';
     document.getElementById('nagy_kep'+this.wherediv).style.maxHeight = meret2 + 'px';
     var meret3 = document.getElementById('nagy_kep'+this.wherediv).offsetWidth;
     meret3 = meret3-20;
     var meret5 = document.getElementById('nagy_kep'+this.wherediv).offsetHeight;
-    var meret4 = (meret2-meret5)/2
+    var meret4 = (meret2-meret5)/2;
+    if(meret4<6){
+    meret4 = 4;
+    }
     document.getElementById('nagy_kep'+this.wherediv).style.marginTop = meret4+'px';
     if(meret3>600){
     document.getElementById('imagepopup_text').style.width = meret3 + 'px';
