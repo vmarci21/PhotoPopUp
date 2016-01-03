@@ -1,16 +1,26 @@
-<img class="imagegallery" src="https://i.imgur.com/vxVwvXjb.jpg" alt="" data-bigsrc="http://into.hu/uploads/images/2015/12/31-14-53-2015.jpg" />
-<img class="imagegallery" src="http://i.imgur.com/6Cj2Y6hb.jpg" alt="" data-bigsrc="http://i.imgur.com/6Cj2Y6h.jpg" />
-<img class="imagegallery" src="http://i.imgur.com/4TrB6o8b.jpg" alt="" data-bigsrc="http://i.imgur.com/4TrB6o8.jpg" />
-<img class="imagegallery" src="http://i.imgur.com/xpG0tN3b.jpg" title="Title" alt="" data-bigsrc="http://i.imgur.com/xpG0tN3.jpg" />
+<img class="imagegallery" src="https://i.imgur.com/QAQSOEcb.jpg" alt="" data-bigsrc="https://i.imgur.com/QAQSOEc.jpg" />
+<img class="imagegallery" src="https://i.imgur.com/cV2qYmjb.jpg" alt="" data-bigsrc="https://i.imgur.com/cV2qYmj.jpg" title="Szöveg, képaláírás" />
+<img class="imagegallery" src="https://i.imgur.com/TWwYuzwb.jpg" alt="" data-bigsrc="https://i.imgur.com/TWwYuzw.jpg" />
+<img class="imagegallery" src="https://i.imgur.com/wD2LQ5Vb.jpg" alt="" data-bigsrc="https://i.imgur.com/wD2LQ5V.jpg" />
+<img class="imagegallery" src="https://i.imgur.com/wD2LQ5Vb.jpg" alt="" data-bigsrc="https://errorkep.gfd/fg.ht" />
+
+
+<!-- text Panel -->
+<a href="javascript://" onclick="imagepopup.showtext('Weboldara beillesztés',document.getElementById('szovpop').innerHTML);">Text</a>
+<div id="szovpop" style="display: none;"><p>HTML</p>
+<textarea readonly="" id="megoszt1" onclick="SelectAll('megoszt1');">&lt;iframe src="http://into.hu/embed/termek/4366" scrolling="no" frameborder="0" style="width: 214px;height:74px;"&gt;&lt;/iframe&gt;</textarea>
+<p>BBCode</p>
+<input type="text" id="megoszt2" onclick="SelectAll('megoszt2');" value="[URL=http://into.hu/termek/windows-firewall-control]Letöltés >> Windows Firewall Control 4.6.0.0[/URL]"></div>
+
 
 
 <!-- PhotoPopUp Panel -->
-<div id="kepnagyito" onclick="elrejtkep2(event);">
-  <div id="kepnagyito_felso"></div>
-  <div id="kepnagyito_load"><img src="http://into.hu/assets/images/loading.gif"></div>
-  <div id="kepnagyito_kep1"></div>
-  <div id="kepnagyito_kep2"></div>
-  <div id="kepnagyito_szoveg"></div>
-  <div id="kepnagyito_prev"  onclick="prev();"><span>&#8592;</span></div>
-  <div id="kepnagyito_next" onclick="next();"><span>&#8594;</span></div>
+<div id="imagepopup" onclick="imagepopup.hideimage2(event);">
+  <div id="imagepopup_panel"></div>
+  <div id="imagepopup_load"><img src="http://into.hu/assets/images/loading.gif"></div>
+  <div id="imagepopup_image1"></div>
+  <div id="imagepopup_image2"></div>
+  <div id="imagepopup_text"></div>
+  <div id="imagepopup_prev"  onclick="imagepopup.prev();"><span>&#8592;</span></div>
+  <div id="imagepopup_next" onclick="imagepopup.next();"><span>&#8594;</span></div>
 </div>
