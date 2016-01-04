@@ -1,4 +1,4 @@
-/*ImagePopUp CSS*/
+/*ImagePopUp CSS 1.1*/
 #imagepopup {
     position: fixed;
     top: 0;
@@ -7,7 +7,6 @@
     bottom: 0;
     background: rgba(82, 82, 82, 0.9);
     opacity: 0;
-    display: none;
     text-align:center;
     z-index:100;
     user-select: none;
@@ -75,7 +74,7 @@ margin: -34px auto;
   transition: 0.2s;
 }
 #imagepopup_next.active, #imagepopup_prev.active {
-  opacity: 1;
+    opacity: 1;
     position: fixed;
     top:0;
     bottom:0;
@@ -90,11 +89,14 @@ margin: -34px auto;
   padding: 10px;
   width: 20px;
   height: 20px;
-   top:48%;
-    top: calc(50% - 20px);
+  top:48%;
+  opacity: 0;
+  top: calc(50% - 20px);
   background: #101010;
   border-radius: 4px;
-  transition: 0.2s;
+}
+#imagepopup_next.active span, #imagepopup_prev.active span {
+    opacity: 1;
 }
 #imagepopup_next:hover span, #imagepopup_prev:hover span {
   background: #000;
@@ -154,7 +156,17 @@ margin: -34px auto;
  opacity: 1;
      margin-top: 10px;
 }
-
+#imagepopup_fixer {
+    position: fixed;
+    height: 1px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10002;
+    float: left;
+    background: #930;
+    opacity: 0.1;
+}
 
 @media only screen and ( max-width: 850px ) {
   #imagepopup {
