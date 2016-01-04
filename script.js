@@ -1,5 +1,5 @@
 /*ImagepopUp JS 
-Version: 1.0
+Version: 1.1
 http://intomedia.hu
 https://github.com/vmarci21/PhotoPopUp
 */
@@ -180,17 +180,47 @@ starty = 0;
 ennyit = 0;
 starttop = 0;
 ennyit2 = 0;
-document.getElementById('imagepopup').addEventListener('touchstart', function(event) {
+if (window.PointerEvent) {
+if(navigator.maxTouchPoints && navigator.maxTouchPoints > 1) {
+		window.addEventListener('pointerdown', function(event) {
+    	touchstarted(event.clientX, event.clientY);
+		}, false);
+    window.addEventListener('pointermove', function(event) {
+    	touchmoved(event.clientX, event.clientY);
+		}, false);
+    window.addEventListener('pointerup', function(event) {
+    	touchended();
+		}, false);
+}
+
+}else{
+	document.getElementById('imagepopup').addEventListener('touchstart', function(event) {
+		var touch = event.targetTouches[0];
+    touchstarted(touch.pageX,touch.pageY);
+ 	}, false);
+ 	document.getElementById('imagepopup').addEventListener('touchmove', function(event) {
    var touch = event.targetTouches[0];
-    startx = touch.pageX;
-    starty= touch.pageY;
+   touchmoved(touch.pageX,touch.pageY);
+ 	}, false);
+ 	document.getElementById('imagepopup').addEventListener('touchend', function(event) {
+    var touch = event.targetTouches[0];
+   touchended();
+ 	}, false);
+
+}
+
+function touchstarted(x,y){
+    startx = x;
+    starty= y;
     starttop = document.getElementById('nagy_kep'+imagepopup.wherediv).style.marginTop;
     starttop = starttop.replace('px','');
-  }, false);
-  document.getElementById('imagepopup').addEventListener('touchmove', function(event) {
-   var touch = event.targetTouches[0];
-   ennyit = touch.pageX-startx;
-   ennyit2 = starty-touch.pageY;
+}
+
+
+   
+ function touchmoved(x,y){
+   ennyit = x-startx;
+   ennyit2 = starty-y;
    if(Math.abs(ennyit)>Math.abs(ennyit2)){
     document.getElementById('nagy_kep'+imagepopup.wherediv).style.marginLeft = ennyit+ 'px';
    }else{
@@ -198,20 +228,21 @@ document.getElementById('imagepopup').addEventListener('touchstart', function(ev
      document.getElementById('nagy_kep'+imagepopup.wherediv).style.marginTop = ennyit3+ 'px';
     }
      event.preventDefault();
-  }, false);
-  document.getElementById('imagepopup').addEventListener('touchend', function(event) {
+  }
+  
+  function touchended(){
    var hova = '0px';
    if(Math.abs(ennyit)>Math.abs(ennyit2)){
-   if(ennyit>200 && imagepopup.hasprev){
+   if(ennyit>120 && imagepopup.hasprev){
    var hova = '100%';
-   }else if(ennyit<-200 && imagepopup.hasnext){
+   }else if(ennyit<-120 && imagepopup.hasnext){
    var hova = '-200%';
    }
     document.getElementById('nagy_kep'+imagepopup.wherediv).className = 'touch';
     document.getElementById('nagy_kep'+imagepopup.wherediv).style.marginLeft = hova;
-   if(ennyit>200 && imagepopup.hasprev){
+   if(ennyit>120 && imagepopup.hasprev){
    imagepopup.prev();
-   }else if(ennyit<-200 && imagepopup.hasnext){
+   }else if(ennyit<-120 && imagepopup.hasnext){
    imagepopup.next();
    }
    }else{
@@ -223,7 +254,7 @@ document.getElementById('imagepopup').addEventListener('touchstart', function(ev
    document.getElementById('nagy_kep'+imagepopup.wherediv).className = 'touch';
    document.getElementById('nagy_kep'+imagepopup.wherediv).style.marginTop = hova;
       }
-  }, false);
+      }
 },
 
 hideview: function(idname) {
