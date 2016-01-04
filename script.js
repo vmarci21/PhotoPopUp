@@ -12,6 +12,7 @@ hasnext: false,
 hasprev: false,
 opened: false,
 showimage: function(url,text,gallery,ie) {
+document.getElementById("imagepopup_fixer").style.display='none';
 this.opened = true;
 var nextimageurl = '';
 var wherediv1 = 1;
@@ -82,6 +83,7 @@ newImg.src = url;
 },
 
 showtext: function(title,text){
+document.getElementById("imagepopup_fixer").style.display='none';
 document.getElementById('imagepopup').style.display = 'block';
 document.getElementById('imagepopup_image1').innerHTML = '<div id="window"><h3 class="title">'+title+'</h3><p>'+text+'</p></div>';
 document.getElementById('imagepopup_panel').innerHTML = '<a href="javascript://" onclick="imagepopup.hideimage();">x</a>';
@@ -127,7 +129,7 @@ document.getElementById('imagepopup_text').innerHTML = '';
 document.getElementById('imagepopup_prev').className = '';
 document.getElementById('imagepopup_next').className = '';
 }, 300);
-
+document.getElementById("imagepopup_fixer").style.display='block';
 },
 
 resizeimage: function() {
