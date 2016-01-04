@@ -1,5 +1,5 @@
 /*ImagepopUp JS 
-Version: 1.1
+Version: 1.0
 http://intomedia.hu
 https://github.com/vmarci21/PhotoPopUp
 */
@@ -72,7 +72,7 @@ newImg.onload = function() {
     document.getElementById('imagepopup_image'+wherediv1).className = 'active';
     document.getElementById('imagepopup_image'+wherediv1).innerHTML = '<img id="nagy_kep'+wherediv1+'" src="'+url+'">';
     imagepopup.resizeimage();
-    document.getElementById('imagepopup_panel').innerHTML = '<a href="'+url+'" target="_blank">Link</a> <a href="javascript://" onclick="imagepopup.hideimage();">x</a>';
+    document.getElementById('imagepopup_panel').innerHTML = '<a href="'+url+'" target="_blank">Link</a> <a href="javascript://" onclick="imagepopup.hideimage();" class="close">x</a>';
     document.getElementById('imagepopup_text').innerHTML = text;
     if(nextimageurl!=''){
      var newImg2 = new Image;
@@ -86,7 +86,7 @@ showtext: function(title,text){
 document.getElementById("imagepopup_fixer").style.display='none';
 document.getElementById('imagepopup').style.display = 'block';
 document.getElementById('imagepopup_image1').innerHTML = '<div id="window"><h3 class="title">'+title+'</h3><p>'+text+'</p></div>';
-document.getElementById('imagepopup_panel').innerHTML = '<a href="javascript://" onclick="imagepopup.hideimage();">x</a>';
+document.getElementById('imagepopup_panel').innerHTML = '<a href="javascript://" onclick="imagepopup.hideimage();" class="close">x</a>';
 setTimeout(function(){ document.getElementById('imagepopup').className = 'active'; 
 document.getElementById('imagepopup').className = 'active';
 document.getElementById('imagepopup_image1').className = 'active';
@@ -124,12 +124,15 @@ this.hideimage();
 hideimage: function(){
 this.opened = false;
  document.getElementById('imagepopup').className = '';
-setTimeout(function(){ document.getElementById('imagepopup').style.display = 'none';
+setTimeout(function(){
+document.getElementById('imagepopup').style.display = 'none';
 document.getElementById('imagepopup_text').innerHTML = '';
+document.getElementById('imagepopup_image1').innerHTML = '';
+document.getElementById('imagepopup_image2').innerHTML = '';
 document.getElementById('imagepopup_prev').className = '';
 document.getElementById('imagepopup_next').className = '';
-}, 300);
 document.getElementById("imagepopup_fixer").style.display='block';
+}, 400);
 },
 
 resizeimage: function() {
@@ -180,13 +183,13 @@ starty = 0;
 ennyit = 0;
 starttop = 0;
 ennyit2 = 0;
-if (window.PointerEvent) {
+if (window.PointerEvent && !("undefined" != typeof document.documentElement.ontouchstart)) {
 if(navigator.maxTouchPoints && navigator.maxTouchPoints > 1) {
 		window.addEventListener('pointerdown', function(event) {
     	touchstarted(event.clientX, event.clientY);
 		}, false);
     window.addEventListener('pointermove', function(event) {
-    	touchmoved(event.clientX, event.clientY);
+    	touchmoved(event.clientX, event.clientY,event);
 		}, false);
     window.addEventListener('pointerup', function(event) {
     	touchended();
@@ -200,7 +203,7 @@ if(navigator.maxTouchPoints && navigator.maxTouchPoints > 1) {
  	}, false);
  	document.getElementById('imagepopup').addEventListener('touchmove', function(event) {
    var touch = event.targetTouches[0];
-   touchmoved(touch.pageX,touch.pageY);
+   touchmoved(touch.pageX,touch.pageY,event);
  	}, false);
  	document.getElementById('imagepopup').addEventListener('touchend', function(event) {
     var touch = event.targetTouches[0];
@@ -212,13 +215,13 @@ if(navigator.maxTouchPoints && navigator.maxTouchPoints > 1) {
 function touchstarted(x,y){
     startx = x;
     starty= y;
+    ennyit = 0;
+    ennyit2 = 0;
     starttop = document.getElementById('nagy_kep'+imagepopup.wherediv).style.marginTop;
     starttop = starttop.replace('px','');
 }
 
-
-   
- function touchmoved(x,y){
+ function touchmoved(x,y,event){
    ennyit = x-startx;
    ennyit2 = starty-y;
    if(Math.abs(ennyit)>Math.abs(ennyit2)){
@@ -250,10 +253,11 @@ function touchstarted(x,y){
     imagepopup.hideimage();
    }else{
    hova = starttop+'px';
-   }
    document.getElementById('nagy_kep'+imagepopup.wherediv).className = 'touch';
    document.getElementById('nagy_kep'+imagepopup.wherediv).style.marginTop = hova;
+   }
       }
+      setTimeout(function(){document.getElementById('nagy_kep'+imagepopup.wherediv).className = '';}, 200);
       }
 },
 
