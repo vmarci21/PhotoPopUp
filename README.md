@@ -2,7 +2,7 @@
 javaScript and CSS responsive Photo / image viewer window and gallery.
 
 ## Demo
-[JsFiddle](https://jsfiddle.net/xyxuxbpm/43/) ([Full page](https://jsfiddle.net/xyxuxbpm/43/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY)
+[JsFiddle](https://jsfiddle.net/xyxuxbpm/70/) ([Full page](https://jsfiddle.net/xyxuxbpm/70/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY)
 
 ## Using
 ### First step
