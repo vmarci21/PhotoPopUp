@@ -1,5 +1,5 @@
 /*ImagepopUp JS 
-Version: 1.1
+Version: 1.1.1
 http://intomedia.hu
 https://github.com/vmarci21/PhotoPopUp
 */
