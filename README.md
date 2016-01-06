@@ -2,9 +2,9 @@
 javaScript and CSS responsive Photo / image viewer window and gallery.
 
 ## Demo
-[JsFiddle](https://jsfiddle.net/xyxuxbpm/72/) ([Full page](https://jsfiddle.net/xyxuxbpm/72/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY) ([Full page](http://codepen.io/vmarci21/full/MKJOyY/)), 
+[JsFiddle](https://jsfiddle.net/xyxuxbpm/81/) ([Full page](https://jsfiddle.net/xyxuxbpm/81/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY) ([Full page](http://codepen.io/vmarci21/full/MKJOyY/)), 
 
-[While theme](https://jsfiddle.net/xyxuxbpm/73/show/)
+[While theme (version 1.1)](https://jsfiddle.net/xyxuxbpm/73/show/)
 
 
 ## Using
@@ -23,6 +23,9 @@ javaScript and CSS responsive Photo / image viewer window and gallery.
 * Use the showtext function, with this parameter:
   * First parameter: Title
   * Second parameter: Full text
+  
+### Options
+* Edit option object in script
 
 ### example
 ```javascript
