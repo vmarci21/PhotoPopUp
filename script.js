@@ -1,9 +1,17 @@
 /*ImagepopUp JS 
-Version: 1.1
+Version: 1.1.1
 http://intomedia.hu
 https://github.com/vmarci21/PhotoPopUp
 */
 var imagepopup = {
+option: {
+imageloadingerror_title:'Loading errors',
+imageloadingerror_text:'Failed to load the picture :(',
+close_element:'x',
+open_element: 'Open',
+enabled_keyboard_control: true,
+enabled_touch_control: true
+},
 firstimage: true,
 imageherei: 0,
 wherediv: 1,
@@ -12,6 +20,9 @@ hasnext: false,
 hasprev: false,
 opened: false,
 showimage: function(url,text,gallery,ie) {
+if(text==undefined){
+text = '';
+}
 document.getElementById("imagepopup_fixer").style.display='none';
 this.opened = true;
 var nextimageurl = '';
@@ -20,8 +31,8 @@ var wherediv2 = 2;
 if(ie==undefined || ie=='' || ie==null){ie=0;}
 if(this.firstimage){
 window.addEventListener("resize",function(){imagepopup.resizeimage();});
-imagepopup.mobiledrag();
-imagepopup.keyboard_view();
+if(imagepopup.option.enabled_touch_control){imagepopup.mobiledrag();}
+if(imagepopup.option.enabled_keyboard_control){imagepopup.keyboard_view();}
 this.firstimage = false;
 }
 if(gallery!=undefined){
@@ -62,7 +73,7 @@ setTimeout(function(){ document.getElementById('imagepopup').className = 'active
 var newImg = new Image;
 newImg.onerror = function() {
 document.getElementById('imagepopup_load').className = '';
-imagepopup.showtext('Loading errors','Failed to load the picture :(');
+imagepopup.showtext(imagepopup.option.imageloadingerror_title,imagepopup.option.imageloadingerror_text);
 };
 
 newImg.onload = function() {
@@ -72,7 +83,7 @@ newImg.onload = function() {
     document.getElementById('imagepopup_image'+wherediv1).className = 'active';
     document.getElementById('imagepopup_image'+wherediv1).innerHTML = '<img id="nagy_kep'+wherediv1+'" src="'+url+'">';
     imagepopup.resizeimage();
-    document.getElementById('imagepopup_panel').innerHTML = '<a href="'+url+'" target="_blank">Link</a> <a href="javascript://" onclick="imagepopup.hideimage();" class="close">x</a>';
+    document.getElementById('imagepopup_panel').innerHTML = '<a href="'+url+'" target="_blank">'+imagepopup.option.open_element+'</a> <a href="javascript://" onclick="imagepopup.hideimage();" class="close">'+imagepopup.option.close_element+'</a>';
     document.getElementById('imagepopup_text').innerHTML = text;
     if(nextimageurl!=''){
      var newImg2 = new Image;
@@ -129,6 +140,8 @@ document.getElementById('imagepopup').style.display = 'none';
 document.getElementById('imagepopup_text').innerHTML = '';
 document.getElementById('imagepopup_image1').innerHTML = '';
 document.getElementById('imagepopup_image2').innerHTML = '';
+document.getElementById('imagepopup_image1').className = '';
+document.getElementById('imagepopup_image2').className = '';
 document.getElementById('imagepopup_prev').className = '';
 document.getElementById('imagepopup_next').className = '';
 document.getElementById("imagepopup_fixer").style.display='block';
