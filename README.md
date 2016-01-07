@@ -24,6 +24,9 @@ javaScript and CSS responsive Photo / image viewer window and gallery.
   * First parameter: Title
   * Second parameter: Full text
   
+### Hide window
+* Use the hideimage function
+
 ### Options
 * Edit option object in script
 
@@ -44,6 +47,9 @@ imagepopup.showtext('Header','Text');
 imagepopup.showtext('Header',document.getElementById('szovpop').innerHTML);
 ```
 
+```javascript
+imagepopup.hideimage();
+```
 
 
 ## used
