@@ -68,6 +68,8 @@ imagepopup.hideimage();
 | **Image preload in gallery** | **Yes**  | **Yes**  | No | No | No |
 | **Fade animation** | **Yes**  | No  | **Yes** | **Yes** | **Yes** |
 | **Text window** | **Yes**  | No  | **Yes** | **Yes** | **Yes** |
+| **summary** | **10/13**  | **10/13**  | 6/13 | 6/13 | 4/13 |
+
 
 
 
