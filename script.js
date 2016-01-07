@@ -1,5 +1,5 @@
 /*ImagepopUp JS 
-Version: 1.1.1
+Version: 1.2.0
 http://intomedia.hu
 https://github.com/vmarci21/PhotoPopUp
 */
@@ -19,6 +19,25 @@ gallerye: '',
 hasnext: false,
 hasprev: false,
 opened: false,
+events_open:new Array(),
+events_close:new Array(),
+events_buttonclick:new Array(),
+new_button:new Array(),
+addevent: function(where,e){
+if(where=='onopen'){
+this.events_open.push(e);
+}else if(where=='onclose'){
+this.events_close.push(e);
+}else if(where=='onbuttonclick'){
+this.events_buttonclick.push(e);
+}
+},
+addbutton: function(title,e){
+this.new_button.push(new Array(title,e));
+},
+buttonclick_run: function(i){
+this.new_button[i][1]();
+},
 showimage: function(url,text,gallery,ie) {
 if(text==undefined){
 text = '';
@@ -84,11 +103,19 @@ newImg.onload = function() {
     document.getElementById('imagepopup_image'+wherediv1).innerHTML = '<img id="nagy_kep'+wherediv1+'" src="'+url+'">';
     imagepopup.resizeimage();
     document.getElementById('imagepopup_panel').innerHTML = '<a href="'+url+'" target="_blank">'+imagepopup.option.open_element+'</a> <a href="javascript://" onclick="imagepopup.hideimage();" class="close">'+imagepopup.option.close_element+'</a>';
+    for (var i=0; i<imagepopup.new_button.length; i++) {
+            document.getElementById('imagepopup_panel').innerHTML += ' <a href="javascript://" onclick="imagepopup.buttonclick_run('+i+');">'+imagepopup.new_button[i][0]+'</a> ';
+		}
+    
+    
     document.getElementById('imagepopup_text').innerHTML = text;
     if(nextimageurl!=''){
      var newImg2 = new Image;
      newImg2.src = nextimageurl;
     }
+    for (var i=0; i<imagepopup.events_open.length; i++) {
+            imagepopup.events_open[i](url,text);
+		}
 }
 newImg.src = url;
 },
@@ -114,6 +141,9 @@ if(imagelist[this.imageherei+1].dataset.bigsrc!=undefined){
      }else{
      var url = imagelist[this.imageherei+1].src;
      }
+  	for (var i=0; i<imagepopup.events_buttonclick.length; i++) {
+		 imagepopup.events_buttonclick[i]('next');
+		}
  this.showimage(url,imagelist[this.imageherei+1].title,this.gallerye,this.imageherei);
  },
  prev: function(){
@@ -123,6 +153,9 @@ if(imagelist[this.imageherei-1].dataset.bigsrc!=undefined){
      }else{
      var url = imagelist[this.imageherei-1].src;
      }
+   for (var i=0; i<imagepopup.events_buttonclick.length; i++) {
+		 imagepopup.events_buttonclick[i]('prev');
+		}
  this.showimage(url,imagelist[this.imageherei-1].title,this.gallerye,this.imageherei-1);
  },
 
@@ -146,6 +179,9 @@ document.getElementById('imagepopup_prev').className = '';
 document.getElementById('imagepopup_next').className = '';
 document.getElementById("imagepopup_fixer").style.display='block';
 }, 400);
+for (var i=0; i<imagepopup.events_close.length; i++) {
+     imagepopup.events_close[i]();
+}
 },
 
 resizeimage: function() {
