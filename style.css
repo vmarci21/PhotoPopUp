@@ -1,4 +1,4 @@
-/*ImagePopUp CSS 1.1.1*/
+/*ImagePopUp CSS 1.2.0*/
 #imagepopup {
     position: fixed;
     top: 0;
@@ -43,8 +43,9 @@
 #imagepopup_panel a:first-child {
   float: left;
 }
-#imagepopup_panel a:last-child {
+#imagepopup_panel a.close {
   float: right;
+  margin-left:20px;
 }
 #imagepopup_text {
     background: rgba(0, 0, 0, 0.8);
