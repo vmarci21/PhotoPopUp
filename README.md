@@ -2,7 +2,7 @@
 javaScript and CSS responsive Photo / image viewer window and gallery.
 
 ## Demo
-[JsFiddle](https://jsfiddle.net/xyxuxbpm/81/) ([Full page](https://jsfiddle.net/xyxuxbpm/81/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY) ([Full page](http://codepen.io/vmarci21/full/MKJOyY/)), 
+[JsFiddle](https://jsfiddle.net/xyxuxbpm/95/) ([Full page](https://jsfiddle.net/xyxuxbpm/95/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY) ([Full page](http://codepen.io/vmarci21/full/MKJOyY/)), 
 
 [While theme (version 1.1)](https://jsfiddle.net/xyxuxbpm/73/show/)
 
@@ -19,18 +19,6 @@ javaScript and CSS responsive Photo / image viewer window and gallery.
   * Second parameter: Image title
   * third parameter: Gallery class name (see more: using_test.html and using_test.js)
 
-### Text
-* Use the showtext function, with this parameter:
-  * First parameter: Title
-  * Second parameter: Full text
-  
-### Hide window
-* Use the hideimage function
-
-### Options
-* Edit option object in script
-
-### example
 ```javascript
 imagepopup.showimage('http://test.hu/image.jpg');
 ```
@@ -38,6 +26,11 @@ imagepopup.showimage('http://test.hu/image.jpg');
 ```javascript
 imagepopup.showimage('http://test.hu/image.jpg','This is an image.');
 ```
+
+### Text
+* Use the showtext function, with this parameter:
+  * First parameter: Title
+  * Second parameter: Full text
 
 ```javascript
 imagepopup.showtext('Header','Text');
@@ -47,9 +40,38 @@ imagepopup.showtext('Header','Text');
 imagepopup.showtext('Header',document.getElementById('szovpop').innerHTML);
 ```
 
+### Hide window
+* Use the hideimage function
+
 ```javascript
 imagepopup.hideimage();
 ```
+
+### Add custom button
+[See this example](https://jsfiddle.net/xyxuxbpm/91/)
+* Use the addbutton function, with this parameter:
+  * First parameter: Title, button text
+  * Second parameter: function, that runs when clicked on the button
+
+```javascript
+imagepopup.addbutton('alert button',function(){alert('alert');});
+```
+
+### Add custom events
+[See this example](https://jsfiddle.net/xyxuxbpm/92/)
+* Use the addevent function, with this parameter:
+  * First parameter: onopen / onclose / onbuttonclick
+  * Second parameter: function
+    * a onopen return url and title, onclose return 'prev' or 'next'
+
+```javascript
+imagepopup.addevent('onopen',function(url,title){alert('Open image ('+url+')');});
+```
+
+### Options
+* Edit option object in script
+
+
 
 ## Comparison
 
@@ -64,12 +86,12 @@ imagepopup.hideimage();
 | **Easy basic configuration** | **Yes**  | **Yes**  | **Yes**  | **Yes** | **Yes** |
 | **Custom events** | **Yes**  | **Yes**  | **Yes**  | No | No |
 | **Custom buttons, functions** | **Yes**  | No  | No  | No | No |
-| **HTML5 fullscreen** | Not yet  | **Yes**  | No  | No | No |
+| **HTML5 fullscreen** | **Yes, with addon**   | **Yes**  | No  | No | No |
 | **Image zoom** | Not yet  | **Yes**  | No  | No | No |
 | **Image preload in gallery** | **Yes**  | **Yes**  | No | No | No |
 | **Fade animation** | **Yes**  | No  | **Yes** | **Yes** | **Yes** |
 | **Text window** | **Yes**  | No  | **Yes** | **Yes** | **Yes** |
-| **summary** | **12/14**  | **10/14**  | 6/14 | 6/14 | 4/14 |
+| **summary** | **13/14**  | **10/14**  | 6/14 | 6/14 | 4/14 |
 
 
 
