@@ -48,5 +48,5 @@ imagepopup.showtext('Header',document.getElementById('szovpop').innerHTML);
 
 ## used
 * [CSS3 + Javascript beúszó ablak](http://kovjonas.into.hu/cssablak.html)
-* [PhotoSwipe](https://github.com/dimsemenov/photoswipe)
+* [PhotoSwipe](https://github.com/dimsemenov/photoswipe) (implementation ideas)
 * And custom scripts combination
