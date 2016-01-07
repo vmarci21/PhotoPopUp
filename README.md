@@ -66,7 +66,8 @@ imagepopup.hideimage();
 | **HTML5 fullscreen** | Not yet  | **Yes**  | No  | No | No |
 | **Image zoom** | Not yet  | **Yes**  | No  | No | No |
 | **Image preload in gallery** | **Yes**  | **Yes**  | No | No | No |
-| **Fade animation** | **Yes**  | None  | **Yes** | **Yes** | **Yes** |
+| **Fade animation** | **Yes**  | No  | **Yes** | **Yes** | **Yes** |
+| **Text window** | **Yes**  | No  | **Yes** | **Yes** | **Yes** |
 
 
 
