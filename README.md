@@ -51,6 +51,23 @@ imagepopup.showtext('Header',document.getElementById('szovpop').innerHTML);
 imagepopup.hideimage();
 ```
 
+## Comparison
+
+|               | Photo PopUp 1.1.1 | PhotoSwipe 4.1.1 | FancyBox 1.3.4 | Yoxigen 2.21 | Clearbox 3.7 |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| **JavaScript size** | **9.8 KB**  | 25 KB (only core.js)  | 27.9 KB  |  39.6 KB | 16.1 KB (only cb_core.js) |
+| **Using jQuery** | **No**  | **No**  | Yes  | Yes | Yes |
+| **Responsive** (resized window) | **Yes**  | **yes**  | No  | **yes** | No |
+| **Mobile view** | **Good**  | **Good**  | **Good**  | **Good** | **Good** |
+| **Keyboard control** | **Yes**  | **Yes**  | **Yes**  | **Yes** | No |
+| **Touch gesture control** | **Yes**  | **Yes**  | No  | No | No |
+| **Easy basic configuration** | **Yes**  | **Yes**  | **Yes**  | **Yes** | **Yes** |
+| **Custom events** | Not yet  | **Yes**  | **Yes**  | No | No |
+| **Image preload in gallery** | **Yes**  | **Yes**  | No | No | No |
+| **Fade animation** | **Yes**  | None  | **Yes** | **Yes** | **Yes** |
+
+
+
 
 ## used
 * [CSS3 + Javascript beúszó ablak](http://kovjonas.into.hu/cssablak.html)
