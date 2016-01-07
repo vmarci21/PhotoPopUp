@@ -57,12 +57,14 @@ imagepopup.hideimage();
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | **JavaScript size** | **9.8 KB**  | 25 KB (only core.js)  | 27.9 KB  |  39.6 KB | 16.1 KB (only cb_core.js) |
 | **Using jQuery** | **No**  | **No**  | Yes  | Yes | Yes |
-| **Responsive** (resized window) | **Yes**  | **yes**  | No  | **yes** | No |
+| **Responsive** (resized window) | **Yes**  | **Yes**  | No  | **Yes** | No |
 | **Mobile view** | **Good**  | **Good**  | **Good**  | **Good** | **Good** |
 | **Keyboard control** | **Yes**  | **Yes**  | **Yes**  | **Yes** | No |
 | **Touch gesture control** | **Yes**  | **Yes**  | No  | No | No |
 | **Easy basic configuration** | **Yes**  | **Yes**  | **Yes**  | **Yes** | **Yes** |
 | **Custom events** | Not yet  | **Yes**  | **Yes**  | No | No |
+| **HTML5 fullscreen** | Not yet  | **Yes**  | No  | No | No |
+| **Image zoom** | Not yet  | **Yes**  | No  | No | No |
 | **Image preload in gallery** | **Yes**  | **Yes**  | No | No | No |
 | **Fade animation** | **Yes**  | None  | **Yes** | **Yes** | **Yes** |
 
