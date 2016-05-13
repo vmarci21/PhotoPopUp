@@ -42,7 +42,7 @@ javaScript and CSS responsive Photo / image viewer window and gallery.
 ```javascript
 imagepopup.newgallery('imagagesClassName');
 ```
-[More about Gallery](/vmarci21/PhotoPopUp/wiki/Image-gallery) 
+[More about Gallery](https://github.com/vmarci21/PhotoPopUp/wiki/Image-gallery) 
 
 ### Image
 
