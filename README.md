@@ -10,9 +10,9 @@ javaScript and CSS responsive Photo / image viewer window and gallery.
 
 ## Comparison
 
-|               | Photo PopUp 1.2.0 | PhotoSwipe 4.1.1 | FancyBox 1.3.4 | Yoxigen 2.21 | Clearbox 3.7 |
+|               | Photo PopUp 1.3.0 | PhotoSwipe 4.1.1 | FancyBox 1.3.4 | Yoxigen 2.21 | Clearbox 3.7 |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| **JavaScript size** | **10.9 KB**  | 25 KB (only core.js)  | 27.9 KB  |  39.6 KB | 16.1 KB (only cb_core.js) |
+| **JavaScript size** | **11.4 KB**  | 25 KB (only core.js)  | 27.9 KB  |  39.6 KB | 16.1 KB (only cb_core.js) |
 | **Using jQuery** | **No**  | **No**  | Yes  | Yes | Yes |
 | **Responsive** (resized window) | **Yes**  | **Yes**  | No  | **Yes** | No |
 | **Mobile view** | **Good**  | **Good**  | **Good**  | **Good** | **Good** |
