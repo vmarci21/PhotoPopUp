@@ -1,5 +1,5 @@
 /*ImagepopUp JS 
-Version: 1.2.0
+Version: 1.3.0
 http://intomedia.hu
 https://github.com/vmarci21/PhotoPopUp
 */
@@ -31,6 +31,20 @@ this.events_close.push(e);
 }else if(where=='onbuttonclick'){
 this.events_buttonclick.push(e);
 }
+},
+newgallery: function(classname){
+  if (document.getElementsByClassName(classname).length > 0) {
+    var images = document.getElementsByClassName(classname);
+    for (var i = 0; i < images.length; i++) {
+      images[i].addEventListener("click", function() {
+      	if(this.dataset.bigsrc == undefined){
+        imagepopup.showimage(this.src, this.title, classname);
+        }else{
+        imagepopup.showimage(this.dataset.bigsrc, this.title, classname);
+				}
+      });
+    }
+  }
 },
 addbutton: function(title,e){
 this.new_button.push(new Array(title,e));
@@ -70,7 +84,7 @@ this.gallerye = gallery;
     }
     if(imagelist.length>i+1){
      document.getElementById('imagepopup_next').className = 'active';
-    if(imagelist[i].dataset.bigsrc!=undefined){
+    if(imagelist[i+1].dataset.bigsrc!=undefined){
      nextimageurl = imagelist[i+1].dataset.bigsrc;
      }else{
      nextimageurl = imagelist[i+1].src;
