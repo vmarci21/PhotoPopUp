@@ -38,9 +38,6 @@ var imagepopup = {
         if (document.getElementsByClassName(classname).length > 0) {
             var images = document.getElementsByClassName(classname);
             for (var i = 0; i < images.length; i++) {
-                if (window.CP.shouldStopExecution(1)) {
-                    break;
-                }
                 images[i].addEventListener('click', function () {
                     if (this.dataset.bigsrc == undefined) {
                         imagepopup.showimage(this.src, this.title, classname);
@@ -49,7 +46,6 @@ var imagepopup = {
                     }
                 });
             }
-            window.CP.exitedLoop(1);
         }
     },
     addbutton: function (title, e) {
@@ -88,9 +84,6 @@ var imagepopup = {
             this.gallerye = gallery;
             var imagelist = document.getElementsByClassName(gallery);
             for (var i = ie; i < imagelist.length; i++) {
-                if (window.CP.shouldStopExecution(2)) {
-                    break;
-                }
                 if (imagelist[i].dataset.bigsrc == url || imagelist[i].src == url) {
                     this.imageherei = i;
                     if (this.imageherei % 2 == 0) {
@@ -122,7 +115,6 @@ var imagepopup = {
                     i = imagelist.length;
                 }
             }
-            window.CP.exitedLoop(2);
         }
         document.getElementById('imagepopup').style.display = 'block';
         document.getElementById('imagepopup_load').className = 'active';
@@ -143,12 +135,8 @@ var imagepopup = {
             imagepopup.resizeimage();
             document.getElementById('imagepopup_panel').innerHTML = '<a href="' + url + '" target="_blank">' + imagepopup.option.open_element + '</a> <a href="javascript://" onclick="imagepopup.hideimage();" class="close">' + imagepopup.option.close_element + '</a>';
             for (var i = 0; i < imagepopup.new_button.length; i++) {
-                if (window.CP.shouldStopExecution(3)) {
-                    break;
-                }
                 document.getElementById('imagepopup_panel').innerHTML += ' <a href="javascript://" onclick="imagepopup.buttonclick_run(' + i + ');">' + imagepopup.new_button[i][0] + '</a> ';
             }
-            window.CP.exitedLoop(3);
             document.getElementById('imagepopup_text').innerHTML = text;
             if (nextimageurl != '') {
                 var newImg2 = new Image();
@@ -180,12 +168,8 @@ var imagepopup = {
             var url = imagelist[this.imageherei + 1].src;
         }
         for (var i = 0; i < imagepopup.events_buttonclick.length; i++) {
-            if (window.CP.shouldStopExecution(4)) {
-                break;
-            }
             imagepopup.events_buttonclick[i]('next');
         }
-        window.CP.exitedLoop(4);
         this.showimage(url, imagelist[this.imageherei + 1].title, this.gallerye, this.imageherei);
     },
     prev: function () {
@@ -196,12 +180,8 @@ var imagepopup = {
             var url = imagelist[this.imageherei - 1].src;
         }
         for (var i = 0; i < imagepopup.events_buttonclick.length; i++) {
-            if (window.CP.shouldStopExecution(5)) {
-                break;
-            }
             imagepopup.events_buttonclick[i]('prev');
         }
-        window.CP.exitedLoop(5);
         this.showimage(url, imagelist[this.imageherei - 1].title, this.gallerye, this.imageherei - 1);
     },
     hideimage2: function (t) {
@@ -224,12 +204,8 @@ var imagepopup = {
             document.getElementById('imagepopup_fixer').style.display = 'block';
         }, 400);
         for (var i = 0; i < imagepopup.events_close.length; i++) {
-            if (window.CP.shouldStopExecution(6)) {
-                break;
-            }
             imagepopup.events_close[i]();
         }
-        window.CP.exitedLoop(6);
     },
     resizeimage: function () {
         if (document.getElementById('nagy_kep' + this.wherediv)) {
