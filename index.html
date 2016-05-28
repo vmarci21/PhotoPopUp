@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>PhotoPopUp by vmarci21</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/vmarci21/PhotoPopUp">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/vmarci21/PhotoPopUp/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/vmarci21/PhotoPopUp/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>PhotoPopUp</h1>
+          <p>javaScript and CSS responsive Photo / image viewer window and gallery.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/vmarci21">vmarci21</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="photo-popup" class="anchor" href="#photo-popup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Photo PopUp</h1>
+
+<p>javaScript and CSS responsive Photo / image viewer window and gallery.</p>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
+
+<p><a href="https://jsfiddle.net/xyxuxbpm/99/">JsFiddle</a> (<a href="https://jsfiddle.net/xyxuxbpm/99/show/">Full page</a>) or <a href="http://codepen.io/vmarci21/pen/MKJOyY">CodePen</a> (<a href="http://codepen.io/vmarci21/full/MKJOyY/">Full page</a>), </p>
+
+<p><a href="https://jsfiddle.net/xyxuxbpm/73/show/">While theme (version 1.1)</a></p>
+
+<h2>
+<a id="comparison" class="anchor" href="#comparison" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Comparison</h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Photo PopUp 1.3.0</th>
+<th>PhotoSwipe 4.1.1</th>
+<th>FancyBox 1.3.4</th>
+<th>Yoxigen 2.21</th>
+<th>Clearbox 3.7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JavaScript size</strong></td>
+<td><strong>11.4 KB</strong></td>
+<td>25 KB (only core.js)</td>
+<td>27.9 KB</td>
+<td>39.6 KB</td>
+<td>16.1 KB (only cb_core.js)</td>
+</tr>
+<tr>
+<td><strong>Using jQuery</strong></td>
+<td><strong>No</strong></td>
+<td><strong>No</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>
+<strong>Responsive</strong> (resized window)</td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Mobile view</strong></td>
+<td><strong>Good</strong></td>
+<td><strong>Good</strong></td>
+<td><strong>Good</strong></td>
+<td><strong>Good</strong></td>
+<td><strong>Good</strong></td>
+</tr>
+<tr>
+<td><strong>Keyboard control</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Touch gesture control</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Easy basic configuration</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td><strong>Custom events</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Custom buttons, functions</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>HTML5 fullscreen</strong></td>
+<td><strong>Yes, with addon</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Image zoom</strong></td>
+<td>Not yet</td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Image preload in gallery</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Fade animation</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td><strong>Text window</strong></td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td><strong>summary</strong></td>
+<td><strong>13/14</strong></td>
+<td><strong>10/14</strong></td>
+<td>6/14</td>
+<td>6/14</td>
+<td>4/14</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="using" class="anchor" href="#using" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using</h2>
+
+<h3>
+<a id="first-step" class="anchor" href="#first-step" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>First step</h3>
+
+<ol>
+<li>Load script.js and style.css or script_min.js and style_min.css</li>
+<li>Add website the contents of the photopopop.html file</li>
+</ol>
+
+<h3>
+<a id="gallery" class="anchor" href="#gallery" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gallery</h3>
+
+<ul>
+<li>Use the newgallery function, with this parameter:
+
+<ul>
+<li>HTML image tags className</li>
+</ul>
+</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">imagepopup</span>.<span class="pl-en">newgallery</span>(<span class="pl-s"><span class="pl-pds">'</span>imagagesClassName<span class="pl-pds">'</span></span>);</pre></div>
+
+<p><a href="https://github.com/vmarci21/PhotoPopUp/wiki/Image-gallery">More about Gallery</a> </p>
+
+<h3>
+<a id="image" class="anchor" href="#image" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h3>
+
+<ul>
+<li>Use the showimage function, with this parameter:
+
+<ul>
+<li>First parameter: Image URL</li>
+<li>Second parameter: Image title</li>
+<li>third parameter: Gallery class name (see more: using_test.html and using_test.js)</li>
+</ul>
+</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">imagepopup</span>.<span class="pl-en">showimage</span>(<span class="pl-s"><span class="pl-pds">'</span>http://test.hu/image.jpg<span class="pl-pds">'</span></span>);</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">imagepopup</span>.<span class="pl-en">showimage</span>(<span class="pl-s"><span class="pl-pds">'</span>http://test.hu/image.jpg<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>This is an image.<span class="pl-pds">'</span></span>);</pre></div>
+
+<h3>
+<a id="text" class="anchor" href="#text" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h3>
+
+<ul>
+<li>Use the showtext function, with this parameter:
+
+<ul>
+<li>First parameter: Title</li>
+<li>Second parameter: Full text</li>
+</ul>
+</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">imagepopup</span>.<span class="pl-en">showtext</span>(<span class="pl-s"><span class="pl-pds">'</span>Header<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Text<span class="pl-pds">'</span></span>);</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">imagepopup</span>.<span class="pl-en">showtext</span>(<span class="pl-s"><span class="pl-pds">'</span>Header<span class="pl-pds">'</span></span>,<span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>szovpop<span class="pl-pds">'</span></span>).<span class="pl-smi">innerHTML</span>);</pre></div>
+
+<h3>
+<a id="hide-window" class="anchor" href="#hide-window" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hide window</h3>
+
+<ul>
+<li>Use the hideimage function</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">imagepopup</span>.<span class="pl-en">hideimage</span>();</pre></div>
+
+<h3>
+<a id="add-custom-button" class="anchor" href="#add-custom-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add custom button</h3>
+
+<p><a href="https://jsfiddle.net/xyxuxbpm/91/">See this example</a></p>
+
+<ul>
+<li>Use the addbutton function, with this parameter:
+
+<ul>
+<li>First parameter: Title, button text</li>
+<li>Second parameter: function, that runs when clicked on the button</li>
+</ul>
+</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">imagepopup</span>.<span class="pl-en">addbutton</span>(<span class="pl-s"><span class="pl-pds">'</span>alert button<span class="pl-pds">'</span></span>,<span class="pl-k">function</span>(){<span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>alert<span class="pl-pds">'</span></span>);});</pre></div>
+
+<h3>
+<a id="add-custom-events" class="anchor" href="#add-custom-events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add custom events</h3>
+
+<p><a href="https://jsfiddle.net/xyxuxbpm/92/">See this example</a></p>
+
+<ul>
+<li>Use the addevent function, with this parameter:
+
+<ul>
+<li>First parameter: onopen / onclose / onbuttonclick</li>
+<li>Second parameter: function
+
+<ul>
+<li>a onopen return url and title, onclose return 'prev' or 'next'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">imagepopup</span>.<span class="pl-en">addevent</span>(<span class="pl-s"><span class="pl-pds">'</span>onopen<span class="pl-pds">'</span></span>,<span class="pl-k">function</span>(<span class="pl-smi">url</span>,<span class="pl-smi">title</span>){<span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>Open image (<span class="pl-pds">'</span></span><span class="pl-k">+</span>url<span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">'</span>)<span class="pl-pds">'</span></span>);});</pre></div>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
+
+<ul>
+<li>Edit option object in script</li>
+</ul>
+
+<h2>
+<a id="used" class="anchor" href="#used" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>used</h2>
+
+<ul>
+<li><a href="http://kovjonas.into.hu/cssablak.html">CSS3 + Javascript beúszó ablak</a></li>
+<li>
+<a href="https://github.com/dimsemenov/photoswipe">PhotoSwipe</a> (implementation ideas)</li>
+<li>And custom scripts combination</li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
