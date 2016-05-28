@@ -2,7 +2,7 @@
 javaScript and CSS responsive Photo / image viewer window and gallery.
 
 ## Demo
-[JsFiddle](https://jsfiddle.net/xyxuxbpm/99/) ([Full page](https://jsfiddle.net/xyxuxbpm/99/show/)) or [CodePen](http://codepen.io/vmarci21/pen/MKJOyY) ([Full page](http://codepen.io/vmarci21/full/MKJOyY/)), 
+[Demo website](http://vmtech.into.hu/projekt/photopopup/) or [CodePen](http://codepen.io/vmarci21/pen/adybEo) ([Full page](http://codepen.io/vmarci21/full/adybEo/)), 
 
 [While theme (version 1.1)](https://jsfiddle.net/xyxuxbpm/73/show/)
 
