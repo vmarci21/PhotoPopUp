@@ -40,7 +40,7 @@ javaScript and CSS responsive Photo / image viewer window and gallery.
 * Use the newgallery function, with this parameter:
   * HTML image tags className
 ```javascript
-imagepopup.newgallery('imagagesClassName');
+imagepopup.newGallery('imagagesClassName');
 ```
 [More about Gallery](https://github.com/vmarci21/PhotoPopUp/wiki/Image-gallery) 
 
@@ -52,11 +52,11 @@ imagepopup.newgallery('imagagesClassName');
   * third parameter: Gallery class name (see more: using_test.html and using_test.js)
 
 ```javascript
-imagepopup.showimage('http://test.hu/image.jpg');
+imagepopup.showImage('http://test.hu/image.jpg');
 ```
 
 ```javascript
-imagepopup.showimage('http://test.hu/image.jpg','This is an image.');
+imagepopup.showImage('http://test.hu/image.jpg','This is an image.');
 ```
 
 ### Text
@@ -65,18 +65,18 @@ imagepopup.showimage('http://test.hu/image.jpg','This is an image.');
   * Second parameter: Full text
 
 ```javascript
-imagepopup.showtext('Header','Text');
+imagepopup.showText('Header','Text');
 ```
 
 ```javascript
-imagepopup.showtext('Header',document.getElementById('szovpop').innerHTML);
+imagepopup.showText('Header',document.getElementById('szovpop').innerHTML);
 ```
 
 ### Hide window
 * Use the hideimage function
 
 ```javascript
-imagepopup.hideimage();
+imagepopup.hideImage();
 ```
 
 ### Add custom button
